@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-
+import './sass/style.scss';
+import { Link } from "react-router-dom";
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,15 @@ function App() {
         >
           Learn React
         </a>
+          <nav
+          style={{
+            borderBottom: "solid 1px",
+            paddingBottom: "1rem",
+          }}
+        >
+          <Link to="/Test">Test</Link> |{" "}
+          <Link to="/Shop">Shop</Link>
+        </nav>
       </header>
     </div>
   );
