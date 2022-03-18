@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import './sass/style.scss';
-import { Link } from "react-router-dom";
+import Menu from './component/menu';
+
 function App() {
   return (
     <div className="App">
@@ -10,24 +11,10 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-          <nav
-          style={{
-            borderBottom: "solid 1px",
-            paddingBottom: "1rem",
-          }}
-        >
-          <Link to="/Test">Test</Link> |{" "}
-          <Link to="/Shop">Shop</Link>
-        </nav>
+        
+        <Menu/>
       </header>
+       
     </div>
   );
 }
