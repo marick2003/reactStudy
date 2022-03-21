@@ -15,6 +15,7 @@ const Test = (props) => {
         completed={task.completed}
         key={task.id}
         deleteTask={deleteTask}
+        editTask={editTask}
       />
     )
   );
@@ -26,6 +27,15 @@ const Test = (props) => {
   function deleteTask(id) {
     const remainingTasks = tasks.filter(task => id !== task.id);
     setTasks(remainingTasks);
+  }
+  function editTask(id,newName){
+    const editedTaskList  = tasks.filter(task => {
+      if (id === task.id) {
+        return {...task, name: newName}
+      }
+      return task;
+    });
+    setTasks(editedTaskList );
   }
     return (
       <div className="todoapp stack-large">
