@@ -2,7 +2,7 @@
     background-image: linear-gradient(to bottom, #F1AD56, #DB7290);
     padding: $padding;
 }
-div {
+.App {
     text-align: center;
     color: white;
     @include bg(10px);

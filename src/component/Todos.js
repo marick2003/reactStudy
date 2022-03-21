@@ -1,15 +1,22 @@
-import { memo } from "react";
-
-const Todos = ({ todos }) => {
-  console.log("child render");
+import '../sass/todo.scss';
+const Todos=(props)=>{
   return (
-    <>
-      <h2>My Todos</h2>
-      {todos.map((todo, index) => {
-        return <p key={index}>{todo}</p>;
-      })}
-    </>
+    <li className="todo stack-small">
+      <div className="c-cb">
+        <input id="todo-0" type="checkbox" defaultChecked={true} />
+        <label className="todo-label" htmlFor="todo-0">
+          {props.name}
+        </label>
+      </div>
+      <div className="btn-group">
+        <button type="button" className="btn">
+          Edit <span className="visually-hidden">{props.name}</span>
+        </button>
+        <button type="button" className="btn btn__danger" onClick={() => props.deleteTask(props.id)}>
+          Delete <span className="visually-hidden">{props.name}</span>
+        </button>
+      </div>
+    </li>
   );
-};
-
-export default memo(Todos);
+}
+export default Todos;
