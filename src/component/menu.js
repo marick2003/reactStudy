@@ -11,7 +11,7 @@ const Menu=()=>{
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/blogs">Blogs</Link>
+                <Link to="/Weather">WeatherApp</Link>
               </li>
               <li>
                 <Link to="/test">Test</Link>

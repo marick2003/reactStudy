@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import Todos from "../component/Todos";
 import Form from "../component/Form";
 const Test = (props) => {
@@ -19,6 +19,10 @@ const Test = (props) => {
       />
     )
   );
+  useEffect(()=>{
+    console.log('useEffect');
+
+  });
   function addTask(str) {
     console.log(str);
     const newTask = { id: 'todo-'+(tasks.length+1), name: str, completed: false };

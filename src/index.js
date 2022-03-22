@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Test from "./page/Test";
+import Weather from "./page/Weather";
 import {
   BrowserRouter,
   Routes,
@@ -14,8 +15,8 @@ ReactDOM.render(
   <BrowserRouter>
   <Routes>
   <Route path="/" element={<App />}>
-    <Route index element={<Test />} />
-    <Route path="blogs" element={<Test />} />
+    <Route index element={<Test  />} />
+    <Route path="Weather" element={<Weather />} />
     <Route path="contact" element={<Test />} />
   </Route>
 </Routes>
